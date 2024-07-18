@@ -31,22 +31,22 @@ Write your shellcode in the file `pplayground.s`
   401028:       48 c7 c2 0a 00 00 00    mov    rdx,0xa
   40102f:       49 c7 c2 00 00 00 00    mov    r10,0x0
   401036:       0f 05                   syscall
-wc --bytes shellbytes
-56 shellbytes
+  wc --bytes shellbytes
+  56 shellbytes
   ```
 
 - `make hex` will print the compacted shellcode bytes and length
   example output:
   ```
-00000000: 48 C7 C0 02 00 00 00 48  H......H
-00000008: C7 C6 00 00 00 00 48 C7  ......H.
-00000010: C2 00 00 00 00 0F 05 48  .......H
-00000018: 89 C7 48 C7 C6 01 00 00  ..H.....
-00000020: 00 48 C7 C0 14 01 00 00  .H......
-00000028: 48 C7 C2 0A 00 00 00 49  H......I
-00000030: C7 C2 00 00 00 00 0F 05  ........
-wc --bytes shellbytes
-56 shellbytes
+  00000000: 48 C7 C0 02 00 00 00 48  H......H
+  00000008: C7 C6 00 00 00 00 48 C7  ......H.
+  00000010: C2 00 00 00 00 0F 05 48  .......H
+  00000018: 89 C7 48 C7 C6 01 00 00  ..H.....
+  00000020: 00 48 C7 C0 14 01 00 00  .H......
+  00000028: 48 C7 C2 0A 00 00 00 49  H......I
+  00000030: C7 C2 00 00 00 00 0F 05  ........
+  wc --bytes shellbytes
+  56 shellbytes
   ```
 
 - `make test` compiles the vulnerable example app target.c,
