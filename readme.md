@@ -17,7 +17,7 @@ Write your shellcode in the file `pplayground.s`
 
 - `make debug` launches a gdb session with your compiled shellcode. Useful to inspect its behaviour
 
-- `make dis` will inspect the shellcode bytes next to the
+- `make dis` will print the shellcode bytes next to the
   assembly instructions.
   Example output:
   ```
@@ -35,7 +35,7 @@ wc --bytes shellbytes
 56 shellbytes
   ```
 
-- `make hex` will inspect the compacted shellcode bytes and length
+- `make hex` will print the compacted shellcode bytes and length
   example output:
   ```
 00000000: 48 C7 C0 02 00 00 00 48  H......H
